@@ -1,0 +1,4 @@
+.field-user-description .CodeMirror,
+.field-user-description .CodeMirror-scroll {
+    min-height: 100px;
+}

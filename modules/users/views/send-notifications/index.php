@@ -1,0 +1,46 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\widgets\Pjax;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\modules\users\models\search\UserSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = Yii::t('app', 'Профиль');
+$this->params['breadcrumbs'][] = $this->title;
+
+\app\modules\users\assets\AppAsset::register($this);
+?>
+<div class="users-index">
+
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <div class="box">
+        <div class="box-header">
+
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <?= $this->render('_form', [
+                            'model' => $model,
+                        ]) ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+
+</div>
+

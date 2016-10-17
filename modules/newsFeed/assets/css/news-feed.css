@@ -1,0 +1,9 @@
+
+.field-news-description .CodeMirror,
+.field-news-description .CodeMirror-scroll {
+    min-height: 100px;
+}
+
+.news-item {
+    margin-top: 25px;
+}
