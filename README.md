@@ -261,6 +261,109 @@ User: admin
 Pass: adminadmin
 
 
+Дополнительно
+-------------
+
+Что стоит изменить
+
+* Добавить кэширование
+
+* Организовать отправку уведомлений через RebbitMQ
+
+
+Уведомления
+-----------
+
+Для отпарвки уведомлений используется разработанный для этого модуль [yii2-notifications](https://github.com/suver/yii2-notifications). 
+В нем указаны способы подключения дополнительных каналов отправки. Коротко
+
+В конфигурации модуля добавляем новый канал с указанием данных, которые передаются в init и настройки транспорта из config
+
+```
+'channels' => [
+    [   // You channel
+        'class' => '\you\path\YouChannel',
+        'init' => [
+            // your init settings
+        ],
+        'config' => [
+            // your transport settings
+        ],
+    ],
+```
+
+
+Сам класс канала отправки выглядит примерно так
+
+```
+namespace suver\notifications;
+
+use Yii;
+use suver\notifications\models\Notifications as NotificationsModel;
+
+/**
+ * Class Notification
+ * @package yii2-notifications
+ */
+class YouChannel implements ChannelInterface
+{
+    public $class;
+    public $config;
+    public $init;
+
+
+    
+    /**
+     * Конструктор транспорта
+     * 
+     **/
+    public function __construct($app, $config, $init) {
+        $this->config = $config;
+        $this->init = $init;
+        $app->components = [
+            // configure you needed components
+        ];
+    }
+
+
+    
+    /**
+     * Имя канала
+     * 
+     **/
+    public function getChannelName() {
+        return 'you-channel-name';
+    }
+
+
+    
+    /**
+     * 
+     * 
+     **/
+    public function init($config) {
+        $this->config = $config;
+    }
+    
+    /**
+     * Тут происходит отправка
+     * 
+     **/
+    public function send(NotificationsModel $object, $user) {
+        $subject = $object->getSubject();
+        $message = $object->getMessage();
+
+        Yii::$app->session->setFlash($this->init['key'], $subject . " | " . $message);
+
+        return true;
+    }
+
+
+
+}
+```
+
+
 TESTING
 -------
 
