@@ -83,7 +83,11 @@ yii migrate --migrationPath=@app/modules/newsFeed/migrations
 ```
 
 
+### Cron
 
+Добавьте в крон команду для отправки email
+
+./yii email-send
 
 
 
