@@ -19,6 +19,7 @@ use yii\widgets\Pjax;
         </div>
         <div class="col-md-4">
             <?= $form->field($model, 'role')->checkbox(['maxlength' => true]) ?>
+            Укажите если вместо username указываете роль (admin, user, moderator)
         </div>
         <div class="col-md-4">
             <?= $form->field($model, 'notify')->checkboxList(['email' => 'Email', 'flash-notifications' => 'Flash']) ?>
