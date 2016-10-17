@@ -36,6 +36,10 @@ INSTALLATION
 ~~~
 php composer.phar install
 
+
+php composer.phar update // для обновления версий некоторых библиотек 
+
+yii migrate
 ~~~
 
 Now you should be able to access the application through the following URL, assuming `basic` is the directory
@@ -69,6 +73,14 @@ Install module and run migrations
 * [yii2-behavior-subset](https://github.com/suver/yii2-behavior-subset)
 
 
+```
+yii migrate --migrationPath=@vendor/suver/yii2-settings/migrations
+
+yii migrate --migrationPath=@vendor/suver/yii2-notifications/migrations
+
+yii migrate --migrationPath=@vendor/suver/yii2-behavior-upload/migrations
+
+```
 
 
 ### Установить миграции
@@ -88,6 +100,15 @@ yii migrate --migrationPath=@app/modules/newsFeed/migrations
 Добавьте в крон команду для отправки email
 
 ./yii email-send
+
+
+### Postinstall
+
+```
+chmod -R 777 ./web/assets/
+```
+
+
 
 
 
