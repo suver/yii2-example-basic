@@ -487,7 +487,7 @@
         },
         {
             "name": "suver/yii2-behavior-subset",
-            "version": "v1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suver/yii2-behavior-subset.git",
@@ -530,20 +530,21 @@
         },
         {
             "name": "suver/yii2-behavior-upload",
-            "version": "1.0.6",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suver/yii2-behavior-upload.git",
-                "reference": "41594cbc7f53810db89f643a06b11d81b49bb6df"
+                "reference": "0cda88a83fc3d813e9c7bba57c688bab4a00823c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suver/yii2-behavior-upload/zipball/41594cbc7f53810db89f643a06b11d81b49bb6df",
-                "reference": "41594cbc7f53810db89f643a06b11d81b49bb6df",
+                "url": "https://api.github.com/repos/suver/yii2-behavior-upload/zipball/0cda88a83fc3d813e9c7bba57c688bab4a00823c",
+                "reference": "0cda88a83fc3d813e9c7bba57c688bab4a00823c",
                 "shasum": ""
             },
             "require": {
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-imagine": "~2.0.0"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -569,20 +570,20 @@
                 "upload",
                 "yii2"
             ],
-            "time": "2016-10-10 00:18:49"
+            "time": "2016-10-17 22:02:13"
         },
         {
             "name": "suver/yii2-editor",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suver/yii2-editor.git",
-                "reference": "7adccf8944a78e915d53bf36f88edb140da478b0"
+                "reference": "3397a78e591346d9ba4bc36e6f7fdc3ae389c289"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suver/yii2-editor/zipball/7adccf8944a78e915d53bf36f88edb140da478b0",
-                "reference": "7adccf8944a78e915d53bf36f88edb140da478b0",
+                "url": "https://api.github.com/repos/suver/yii2-editor/zipball/3397a78e591346d9ba4bc36e6f7fdc3ae389c289",
+                "reference": "3397a78e591346d9ba4bc36e6f7fdc3ae389c289",
                 "shasum": ""
             },
             "require": {
@@ -613,25 +614,26 @@
                 "markdown",
                 "yii2"
             ],
-            "time": "2016-10-10 00:18:27"
+            "time": "2016-10-17 03:31:10"
         },
         {
             "name": "suver/yii2-notifications",
-            "version": "1.0.4",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suver/yii2-notifications.git",
-                "reference": "f7bdbc13e9d314fd22696bad9349117309ceef11"
+                "reference": "edc063fa758db33929a386d57c820ae4134b8637"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suver/yii2-notifications/zipball/f7bdbc13e9d314fd22696bad9349117309ceef11",
-                "reference": "f7bdbc13e9d314fd22696bad9349117309ceef11",
+                "url": "https://api.github.com/repos/suver/yii2-notifications/zipball/edc063fa758db33929a386d57c820ae4134b8637",
+                "reference": "edc063fa758db33929a386d57c820ae4134b8637",
                 "shasum": ""
             },
             "require": {
                 "suver/yii2-editor": "*",
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-swiftmailer": "*"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -656,20 +658,20 @@
                 "notifications",
                 "yii2"
             ],
-            "time": "2016-10-11 12:52:40"
+            "time": "2016-10-17 03:59:23"
         },
         {
             "name": "suver/yii2-settings",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suver/yii2-settings.git",
-                "reference": "a8854b2e5887b54903d03a50ea9fc8d85318b5e4"
+                "reference": "4a493f5bba77d4dc5fa9da39f9a2b5d4506aa184"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suver/yii2-settings/zipball/a8854b2e5887b54903d03a50ea9fc8d85318b5e4",
-                "reference": "a8854b2e5887b54903d03a50ea9fc8d85318b5e4",
+                "url": "https://api.github.com/repos/suver/yii2-settings/zipball/4a493f5bba77d4dc5fa9da39f9a2b5d4506aa184",
+                "reference": "4a493f5bba77d4dc5fa9da39f9a2b5d4506aa184",
                 "shasum": ""
             },
             "require": {
@@ -698,7 +700,7 @@
                 "farpse",
                 "yii2"
             ],
-            "time": "2016-10-11 03:04:53"
+            "time": "2016-10-11 03:25:01"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -759,12 +761,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "6b6a3bb8fae68c7a4559e7da29f59cb69f73e1b4"
+                "reference": "b2b5eee3c5d58981d836cbe436c22b5ad3a0e2fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6b6a3bb8fae68c7a4559e7da29f59cb69f73e1b4",
-                "reference": "6b6a3bb8fae68c7a4559e7da29f59cb69f73e1b4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b2b5eee3c5d58981d836cbe436c22b5ad3a0e2fc",
+                "reference": "b2b5eee3c5d58981d836cbe436c22b5ad3a0e2fc",
                 "shasum": ""
             },
             "require": {
@@ -845,7 +847,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-10-14 15:00:03"
+            "time": "2016-10-17 13:36:25"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1221,16 +1223,16 @@
         },
         {
             "name": "codeception/specify",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Specify.git",
-                "reference": "8efcd017687ebdae9c4d95bcbc1dc22a28561874"
+                "reference": "e8abceb9b9db7db24d41aef30ff6c258a9cead36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Specify/zipball/8efcd017687ebdae9c4d95bcbc1dc22a28561874",
-                "reference": "8efcd017687ebdae9c4d95bcbc1dc22a28561874",
+                "url": "https://api.github.com/repos/Codeception/Specify/zipball/e8abceb9b9db7db24d41aef30ff6c258a9cead36",
+                "reference": "e8abceb9b9db7db24d41aef30ff6c258a9cead36",
                 "shasum": ""
             },
             "require": {
@@ -1254,7 +1256,7 @@
                 }
             ],
             "description": "BDD code blocks for PHPUnit and Codeception",
-            "time": "2015-11-26 23:35:52"
+            "time": "2016-10-13 11:54:16"
         },
         {
             "name": "codeception/verify",
@@ -1352,12 +1354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "bb4be1c1878da6baf18a9cc3d9fad1e3ff73a4cd"
+                "reference": "87c9003bc4dadd245a62979a1e35396d6bbf3edf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/bb4be1c1878da6baf18a9cc3d9fad1e3ff73a4cd",
-                "reference": "bb4be1c1878da6baf18a9cc3d9fad1e3ff73a4cd",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/87c9003bc4dadd245a62979a1e35396d6bbf3edf",
+                "reference": "87c9003bc4dadd245a62979a1e35396d6bbf3edf",
                 "shasum": ""
             },
             "require": {
@@ -1394,7 +1396,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-10-13 12:34:10"
+            "time": "2016-10-17 12:45:45"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3260,12 +3262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "9350cea5bf343b657f24e68980490021791935d8"
+                "reference": "c0c92082a2ffef8fab7941d4f6fd6a6a72ed627c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9350cea5bf343b657f24e68980490021791935d8",
-                "reference": "9350cea5bf343b657f24e68980490021791935d8",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/c0c92082a2ffef8fab7941d4f6fd6a6a72ed627c",
+                "reference": "c0c92082a2ffef8fab7941d4f6fd6a6a72ed627c",
                 "shasum": ""
             },
             "require": {
@@ -3302,7 +3304,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-10-14 13:57:37"
+            "time": "2016-10-17 06:50:33"
         },
         {
             "name": "yiisoft/yii2-debug",

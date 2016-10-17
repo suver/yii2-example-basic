@@ -174,6 +174,10 @@ chmod -R 777 ./web/assets/
 
 chmod -R 777 ./runtime/
 
+mkdir web/storage
+
+chmod -R 777 web/storage
+
 
 ```
 
@@ -246,6 +250,15 @@ return [
 ];
 ```
 
+
+
+DEMO
+----
+
+http://t3.start-fly.ru/
+
+User: admin
+Pass: adminadmin
 
 
 TESTING
