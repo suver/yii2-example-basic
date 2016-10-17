@@ -39,7 +39,6 @@ php composer.phar install
 
 php composer.phar update // для обновления версий некоторых библиотек 
 
-yii migrate
 ~~~
 
 Now you should be able to access the application through the following URL, assuming `basic` is the directory
@@ -54,9 +53,13 @@ http://localhost/
 
 
 ```bash
+
+yii migrate
+
 yii migrate --migrationPath=@yii/rbac/migrations/
 
 php yii rbac/init
+
 
 ```
 
@@ -105,9 +108,14 @@ yii migrate --migrationPath=@app/modules/newsFeed/migrations
 ### Postinstall
 
 ```
+
 chmod -R 777 ./web/assets/
+
 ```
 
+**ВНИМАНИЕ после установки необходимо загрузить дамп шаблонов из файла suver_notifications_template.sql**
+
+К сожелению так как эти даннные должны быть внесены в самом конце, в миграции в данной версии их запихнуть невозможно
 
 
 
