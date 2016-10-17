@@ -63,6 +63,67 @@ php yii rbac/init
 
 ```
 
+### Настройка Apache
+
+```
+<VirtualHost *:80>
+        ServerAdmin support@tekecorp.ru
+        ServerName t3.example.com
+        DocumentRoot /com/example/t3/web
+
+        <Directory />
+                Options Indexes FollowSymLinks
+                AllowOverride All
+        </Directory>
+        <Directory "/com/example/t3/web" >
+
+                RewriteEngine on
+                RewriteCond %{REQUEST_FILENAME} !-f
+                RewriteCond %{REQUEST_FILENAME} !-d
+                RewriteRule . index.php
+
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+                Require all granted
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/error-t3.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel info
+
+        CustomLog ${APACHE_LOG_DIR}/access-t3.log combined
+</VirtualHost>
+
+
+```
+
+
+Если ваш алиас указан как `Yii::setAlias('@storage', dirname(__DIR__) . '/storage');` нужно добавить алиса для Apache
+
+```
+
+        Alias /storage/ /com/example/t3/storage/
+        <Directory /storage/>
+                Options Indexes FollowSymlinks
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+        </Directory>
+```
+
+Укажите домен в настройках расширения `suver\yii2-uploads`
+
+```
+        'uploads' => [
+            'class' => 'suver\behavior\upload\Module',
+            'storageDomain' => '//newsfeed.dev/storage'
+        ],
+
+```
+
 
 
 ### Установить модули
@@ -111,11 +172,25 @@ yii migrate --migrationPath=@app/modules/newsFeed/migrations
 
 chmod -R 777 ./web/assets/
 
+chmod -R 777 ./runtime/
+
+
 ```
 
 **ВНИМАНИЕ после установки необходимо загрузить дамп шаблонов из файла suver_notifications_template.sql**
 
 К сожелению так как эти даннные должны быть внесены в самом конце, в миграции в данной версии их запихнуть невозможно
+
+Только после этого можно регистрироватся
+
+После регистрации первого пользователя его необходимо сделать админом. Для этого нужно измениь в таблице auth_assignment значение item_name для свого user_id
+
+Пример
+
+```
+UPDATE `auth_assignment` SET `item_name` = 'admin' WHERE `item_name` = 'user' AND `user_id` = '4';
+```
+
 
 
 

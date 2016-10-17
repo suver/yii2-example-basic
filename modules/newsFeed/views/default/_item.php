@@ -6,7 +6,7 @@ use yii\bootstrap\Html;
 <div class="news-item">
     <div class="row">
         <div class="col-md-2">
-            <img src="<?php echo $model->linkedFile('cover')->thumbnail('small')->byDefault('/images/default-author.jpg')?>" class="img-circle" width="128" height="128">
+            <img src="<?php echo $model->linkedFile('cover')->thumbnail('small')->byDefault('/images/default-author.jpg')->getDomainPath()?>" class="img-circle" width="128" height="128">
         </div>
         <div class="col-md-10">
             <div class="row">
