@@ -3,10 +3,10 @@ Yii 2 Basic Project Template
 
 
 
-REQUIREMENTS
-------------
+Требования
+----------
 
-The minimum requirement
+Минимальные требования
 
 * PHP 5.6.0.
 
@@ -20,9 +20,9 @@ The minimum requirement
 INSTALLATION
 ------------
 
-### Install via Composer
+### Установка
 
-You can then install this project template using the following command:
+Запустить команду
 
 ~~~
 php composer.phar install
@@ -37,7 +37,7 @@ http://localhost/
 ~~~
 
 
-### Install RBAC
+### Установить RBAC
 
 
 ```bash
@@ -49,7 +49,7 @@ php yii rbac/init
 
 
 
-### Install my modules
+### Установить модули
 
 Install module and run migrations
 
@@ -62,7 +62,7 @@ Install module and run migrations
 
 
 
-### Install modules
+### Установить миграции
 
 
 ```bash
@@ -81,25 +81,61 @@ yii migrate --migrationPath=@app/modules/newsFeed/migrations
 CONFIGURATION
 -------------
 
-### Database
-
-Edit the file `config/db.php` with real data, for example:
+Настраиваем подключения к БД и работу уведомлений
 
 ```php
+
+// web
+'notifications' => [
+    'class' => 'suver\notifications\Module',
+    'detailViewWidget' => '\app\widgets\DetailView',
+    'gridViewWidget' => '\app\widgets\GridView',
+    'identityClass' => '\app\models\User',
+    'channels' => [
+        [
+            'class' => '\suver\notifications\EmailChannel',
+            'init' => [
+                'from' => 'mail@example.com',
+            ],
+            'config' => [
+                'class' => 'yii\swiftmailer\Mailer',
+                'transport' => [
+                    'class' => 'Swift_SmtpTransport',
+                    'host' => 'smtp.yandex.ru',
+                    'username' => 'mail@example.com',
+                    'password' => '****',
+                    'port' => '465',
+                    'encryption' => 'ssl',
+                ],
+            ],
+        ],
+        [
+            'class' => '\suver\notifications\FlashNotificationsChannel',
+            'init' => [
+                'key' => 'info',
+            ],
+            'config' => [],
+        ],
+    ],
+];
+    
+// db
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '1234',
+    'username' => 'test',
+    'password' => 'test',
     'charset' => 'utf8',
 ];
 ```
 
-**NOTES:**
-- Yii won't create the database for you, this has to be done manually before you can access it.
-- Check and edit the other files in the `config/` directory to customize your application as required.
-- Refer to the README in the `tests` directory for information specific to basic application tests.
 
+Другое
+------
+
+# Модуль уведомлений #
+
+Способы установки и работы с модулем уведомлений описаны тут [yii2-notifications](https://github.com/suver/yii2-notifications)
 
 
 TESTING
