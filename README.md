@@ -2,6 +2,15 @@ Yii 2 Basic Project Template
 ============================
 
 
+Другое
+------
+
+# Модуль уведомлений #
+
+Способы установки и работы с модулем уведомлений описаны тут [yii2-notifications](https://github.com/suver/yii2-notifications)
+
+
+
 
 Требования
 ----------
@@ -129,13 +138,6 @@ return [
 ];
 ```
 
-
-Другое
-------
-
-# Модуль уведомлений #
-
-Способы установки и работы с модулем уведомлений описаны тут [yii2-notifications](https://github.com/suver/yii2-notifications)
 
 
 TESTING
